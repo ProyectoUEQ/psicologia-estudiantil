@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estrés - Proyecto Psicología</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: linear-gradient(135deg, #B8E0D2, #FDE2E4);
+        }
+
+        header {
+            background-color: #5E548E;
+            padding: 18px 0;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 14px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .portada {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .portada img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(65%);
+        }
+
+        .texto-portada {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+
+        .texto-portada h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .contenido {
+            background-color: white;
+            width: 78%;
+            margin: -20px auto 20px auto;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: justify;
+            
+        }
+
+        .contenido h2 {
+            text-align: center;
+            color: #5E548E;
+            font-size: 32px;
+        }
+
+
+        .contenido p {
+            font-size: 18px; 
+            line-height: 1.6; /* hace que el texto no se vea pegado */
+         }
+
+       /*ANIMACION AL CARGAR LA PAGINA*/
+         @keyframes aparecer {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        .contenido, .texto-portada, .frase {
+         animation: aparecer 1s ease forwards;
+        }
+
+      
+        .frase {
+            background-color: #EAC4D5;
+            padding: 22px;
+            margin: 30px 0;
+            border-radius: 15px;
+            text-align: center;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+         .frase {
+             transition: transform 0.3s, box-shadow 0.3s;
+           }
+
+          .frase:hover {
+              transform: scale(1.05);
+              box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+          } 
+
+
+        .img-contenido {
+            width: 100%;
+            max-width: 520px;
+            display: block;
+            margin: 25px auto;
+            border-radius: 18px;
+        }
+
+        footer {
+            background-color: #5E548E;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+     
+      
+/* footer*/
+footer {
+    background-color: #5E548E;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+    box-sizing: border-box;  /* evita que el padding agrande el footer */
+}
+
+        /* FOOTER */
+        footer {
+            background-color: #5E548E;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+ /*BOTON SIGUIENTE*/
+        .boton-siguiente-container {
+    text-align: center;
+    margin: 40px 0;  /* espacio suficiente arriba y abajo del botón */
+}
+
+.boton-siguiente {
+    background: linear-gradient(135deg, #5E548E, #7B6FC9);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.boton-siguiente:hover {
+    background: linear-gradient(135deg, #7B6FC9, #5E548E);
+    transform: scale(1.05);
+}
+
+    /*MENU DESPLEGABLE*/
+      nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #5E548E;
+    padding: 15px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #7B6FC9;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #5E548E;
+    border-radius: 8px;
+    flex-direction: column;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.submenu:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu .sub-menu a {
+    padding: 10px 15px;
+}
+
+.submenu .sub-menu a:hover {
+    background-color: #7B6FC9;
+}
+
+/*CUADRO DE TIPS*/
+ .cuadro-tips {
+    background: linear-gradient(135deg, #FDE2E4, #B8E0D2);
+    border-left: 8px solid #5E548E;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.cuadro-tips h3 {
+    margin-top: 0;
+    color: #5E548E;
+    font-size: 24px;
+    text-align: center;
+}
+
+.cuadro-tips ul {
+    padding-left: 20px;
+}
+
+.cuadro-tips li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+     
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="motivacion.html">Motivación</a>
+        <a href="orientacion.html">Orientación emocional</a>
+
+        <div class="submenu">
+            <a href="#">Estrés ▼</a>
+            <div class="sub-menu">
+                <a href="#subtema1">¿Qué es el estrés escolar?</a>
+                <a href="#subtema2">Señales de estrés en los estudiantes </a>
+                <a href="#subtema3">Estrés por exámenes y evaluaciones</a>
+                <a href="#subtema4">Estrés por relaciones y convivencia escolar</a>
+                <a href="#subtema5">Manejar el estrés de forma saludable</a>
+
+            </div>
+        </div>
+        <a href="bullying.html">Bullying</a>
+        <a href="apoyo.html">Apoyo</a>
+        <a href="agradecimiento.html">Agradecimiento</a>
+    </nav>
+</header>
+
+
+<div class="portada">
+    <img src="../imagenes/estres.jpg" alt="Estres juvenil">
+    <div class="texto-portada">
+        <h1>Estrés</h1>
+    </div>
+</div>
+
+<div class="contenido">
+
+                 <h2 id="subtema1">¿Qué es el estrés escolar? </h2> 
+<p> El estrés escolar es una respuesta natural del cuerpo y la mente frente a situaciones que generan presión dentro del colegio. Puede aparecer cuando hay muchas tareas, exámenes importantes, exposiciones orales, trabajos grupales o cuando sientes que debes cumplir con expectativas altas, tanto propias como de los demás. Sentir estrés no significa que no seas capaz, sino que estás enfrentando retos que requieren esfuerzo y adaptación.</p>
+
+<p> En pequeñas cantidades, el estrés puede ayudarte a mantenerte atento, concentrado y motivado. Sin embargo, cuando el estrés se vuelve constante o muy intenso, puede afectar tu bienestar emocional, tu rendimiento académico y tu forma de relacionarte con los demás. Por eso es importante aprender a reconocerlo y manejarlo a tiempo, antes de que se acumule y te sobrepase. </p>
+
+<div class="frase">
+       “Sentir estrés no te hace débil, te hace humano.”    </div>
+
+   <img src="../imagenes/enojo.jpg" class="img-contenido" alt="Enojo escolar">
+
+         <h2 id="subtema2">Señales de estrés en los estudiantes </h2>
+<p> El estrés no se manifiesta igual en todos los estudiantes. Algunas personas pueden sentirse constantemente cansadas, irritables o desmotivadas, mientras que otras pueden experimentar dificultad para concentrarse en clase, olvidos frecuentes, dolores de cabeza o problemas para dormir. También es común sentir presión en el pecho, nerviosismo o ganas de evitar ciertas actividades escolares. </p>
+
+<p> Reconocer estas señales es fundamental para cuidar tu salud emocional. Muchas veces normalizamos el estrés y seguimos adelante sin prestar atención a cómo nos sentimos, lo que puede hacer que el malestar aumente. Escuchar a tu cuerpo y a tus emociones te permite detectar cuándo necesitas descansar, reorganizarte o pedir ayuda. </p>
+
+<div class="cuadro-tips">
+    <h3>💡 Tips </h3>
+    <ul>
+        <li>Si notas cambios en tu ánimo o concentración, tómalo como una señal para cuidarte.</li>
+    </ul>
+</div> 
+
+  <h2 id="subtema3">Estrés por exámenes y evaluaciones</h2>
+
+ <p> Los exámenes y evaluaciones suelen ser una de las principales fuentes de estrés en el colegio. El miedo a olvidar lo estudiado, a equivocarse o a obtener una mala calificación puede generar ansiedad incluso antes del día de la prueba. Esto es completamente normal y le ocurre a muchos estudiantes, aunque no siempre se hable de ello. </p> 
+
+<p> Es importante recordar que una evaluación no define tu inteligencia ni tu valor como persona. Las notas son una forma de medir el aprendizaje, pero no reflejan todo tu esfuerzo, tus habilidades ni tu crecimiento. Prepararte con anticipación, estudiar de forma organizada y confiar en el trabajo que realizaste puede ayudarte a enfrentar los exámenes con mayor tranquilidad. </p>
+
+  <div class="frase"> “Una nota no define quién eres.” </div>
+
+<h2 id="subtema4">Estrés por relaciones y convivencia escolar</h2>
+
+<p> Las relaciones con compañeros y docentes también pueden generar estrés. Los conflictos, malentendidos, la presión por encajar o el miedo a ser juzgado pueden afectar tu tranquilidad y tu desempeño en el colegio. Estas situaciones pueden hacer que ir a clases se sienta pesado o incómodo.</p>
+
+<p> Aprender a comunicarte de forma respetuosa, expresar lo que sientes y poner límites saludables es clave para cuidar tu bienestar emocional. Recordar que no puedes controlar las acciones de los demás, pero sí tu manera de responder, te ayudará a manejar mejor estas situaciones y a proteger tu paz emocional. </p>
+
+     <div class="frase"> “Tu paz vale más que cualquier conflicto.” </div>
+
+<img src="../imagenes/conflictos.jpg" class="img-contenido" alt="Conflictos escolar">
+
+<h2 id="subtema5"> Manejar el estrés de forma saludable </h5>
+
+<p> Manejar el estrés no significa eliminarlo por completo, sino aprender a convivir con él de manera saludable. Desarrollar estrategias para liberar tensión y cuidar tu bienestar emocional te permitirá enfrentar las exigencias del colegio con mayor seguridad y confianza. </p>
+
+<p> Actividades como respirar profundo, hacer ejercicio, escuchar música, tomarte pequeños descansos o hablar con alguien de confianza pueden marcar una gran diferencia. Pedir ayuda cuando lo necesitas no es una señal de debilidad, sino una muestra de responsabilidad contigo mismo y con tu aprendizaje.  </p>
+
+<p> El estrés forma parte de la vida escolar, pero no tiene que controlarte. Aprender a reconocerlo y manejarlo te ayudará a sentirte mejor contigo mismo, a disfrutar más del proceso de aprendizaje y a enfrentar los desafíos con una actitud más positiva. </p>
+
+<div class="cuadro-tips">
+    <h3>💡 Tips </h3>
+    <ul>
+        <li>Dedica unos minutos al día para relajarte y desconectarte de las tareas.</li>
+    </ul>
+</div> 
+
+<div class="boton-siguiente-container">
+    <a href="bullying.html" class="boton-siguiente">Siguiente →</a>
+</div>
+
+       
+    
+ <footer>
+    <p>Proyecto de Grado – Área de Psicología</p>
+    <p>
+        Nury Madeley Ortiz Izquierdo ·
+        Ashley Valentina Yepez Chuez ·
+        Victor Emanuel Plua Laborde
+    </p>
+</footer>
+
+         
+</body>
+</html>
+

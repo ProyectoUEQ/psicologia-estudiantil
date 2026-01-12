@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agradecimiento - Proyecto Psicología</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: linear-gradient(135deg, #B8E0D2, #FDE2E4);
+        }
+
+        header {
+            background-color: #5E548E;
+            padding: 18px 0;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 14px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .portada {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .portada img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(65%);
+        }
+
+        .texto-portada {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+
+        .texto-portada h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .contenido {
+            background-color: white;
+            width: 78%;
+            margin: -20px auto 20px auto;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: justify;
+            
+        }
+
+        .contenido h2 {
+            text-align: center;
+            color: #5E548E;
+            font-size: 32px;
+        }
+
+
+        .contenido p {
+            font-size: 18px; 
+            line-height: 1.6; /* hace que el texto no se vea pegado */
+         }
+
+       /*ANIMACION AL CARGAR LA PAGINA*/
+         @keyframes aparecer {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        .contenido, .texto-portada, .frase {
+         animation: aparecer 1s ease forwards;
+        }
+
+      
+        .frase {
+            background-color: #EAC4D5;
+            padding: 22px;
+            margin: 30px 0;
+            border-radius: 15px;
+            text-align: center;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+         .frase {
+             transition: transform 0.3s, box-shadow 0.3s;
+           }
+
+          .frase:hover {
+              transform: scale(1.05);
+              box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+          } 
+
+
+        .img-contenido {
+            width: 100%;
+            max-width: 520px;
+            display: block;
+            margin: 25px auto;
+            border-radius: 18px;
+        }
+
+        footer {
+            background-color: #5E548E;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+     
+      
+/* footer*/
+footer {
+    background-color: #5E548E;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+    box-sizing: border-box;  /* evita que el padding agrande el footer */
+}
+
+        /* FOOTER */
+        footer {
+            background-color: #5E548E;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+ /*BOTON SIGUIENTE*/
+        .boton-siguiente-container {
+    text-align: center;
+    margin: 40px 0;  /* espacio suficiente arriba y abajo del botón */
+}
+
+.boton-siguiente {
+    background: linear-gradient(135deg, #5E548E, #7B6FC9);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.boton-siguiente:hover {
+    background: linear-gradient(135deg, #7B6FC9, #5E548E);
+    transform: scale(1.05);
+}
+
+    /*MENU DESPLEGABLE*/
+      nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #5E548E;
+    padding: 15px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #7B6FC9;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #5E548E;
+    border-radius: 8px;
+    flex-direction: column;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.submenu:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu .sub-menu a {
+    padding: 10px 15px;
+}
+
+.submenu .sub-menu a:hover {
+    background-color: #7B6FC9;
+}
+
+/*CUADRO DE TIPS*/
+ .cuadro-tips {
+    background: linear-gradient(135deg, #FDE2E4, #B8E0D2);
+    border-left: 8px solid #5E548E;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.cuadro-tips h3 {
+    margin-top: 0;
+    color: #5E548E;
+    font-size: 24px;
+    text-align: center;
+}
+
+.cuadro-tips ul {
+    padding-left: 20px;
+}
+
+.cuadro-tips li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+     
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="motivacion.html">Motivación</a>
+        <a href="orientacion.html">Orientación emocional</a>
+        <a href="estres.html">Estrés</a>
+        <a href="bullying.html">Bullying</a>
+        <a href="apoyo.html">Apoyo</a>
+        <a href="agradecimiento.html">Agradecimiento</a>
+    </nav>
+</header>
+<body>
+
+
+<div class="portada">
+    <img src="../imagenes/colegio.jpg" alt="Colegio">
+    <div class="texto-portada">
+        <h1>Agradeciemiento</h1>
+    </div>
+</div>
+
+<div class="contenido">
+
+       <h2>Colegio Unidad Educativa Quevedo</h2>
+
+<p> 
+Este proyecto no solo representa un trabajo académico, sino también el cierre de una etapa muy importante en nuestras vidas. A lo largo de estos tres años en el colegio, hemos vivido momentos de alegría, esfuerzo, retos y aprendizajes que marcaron profundamente nuestra formación, no solo como estudiantes, sino como personas.</p> 
+
+<p> Cada experiencia vivida, tanto las buenas como las difíciles, nos dejó enseñanzas valiosas que hoy llevamos con nosotros. Nada de lo que ocurrió durante este camino fue en vano; todo aportó a nuestro crecimiento personal, emocional y académico. </p> 
+
+<p> Queremos expresar nuestro sincero agradecimiento a la institución educativa que nos acompañó durante este proceso. Un espacio que nos brindó conocimientos, experiencias y oportunidades que formarán parte de nuestra historia para siempre. </p> 
+
+<p> vEste proyecto nace con la esperanza de que pueda aportar al bienestar emocional de los estudiantes y que sirva como un espacio de orientación, apoyo y reflexión. Deseamos que sea una contribución positiva para el colegio que nos vio crecer y que nos dejó recuerdos imborrables.</p> 
+
+<p> Hoy nos despedimos con sentimientos encontrados: felicidad por todo lo aprendido y nostalgia por dejar un lugar que se convirtió en una segunda casa. Nos llevamos aprendizajes, vivencias y recuerdos que permanecerán con nosotros a lo largo de nuestras vidas.</p> 
+
+<p> Gracias por todo lo vivido, por las enseñanzas y por cada experiencia que nos ayudó a crecer. </p> 
+
+<div class="cuadro-tips">
+    <h3>💡 Integrantes del proyecto </h3>
+    <ul>
+        <li>Nury Madeley Ortiz Izquierdo ㅤㅤ
+ㅤㅤ
+
+Ashley Valentina Yepez Chuez ㅤㅤ
+ㅤㅤ
+
+Víctor Emanuel Plua Labordeㅤㅤ</li>
+    </ul>
+</div>

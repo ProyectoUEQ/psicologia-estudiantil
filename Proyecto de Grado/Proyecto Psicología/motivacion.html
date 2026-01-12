@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Motivación - Proyecto Psicología</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: linear-gradient(135deg, #B8E0D2, #FDE2E4);
+        }
+
+        header {
+            background-color: #5E548E;
+            padding: 18px 0;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 14px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .portada {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .portada img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(65%);
+        }
+
+        .texto-portada {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+
+        .texto-portada h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .contenido {
+            background-color: white;
+            width: 78%;
+            margin: -20px auto 20px auto;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: justify;
+            
+        }
+
+        .contenido h2 {
+            text-align: center;
+            color: #5E548E;
+            font-size: 32px;
+        }
+
+
+        .contenido p {
+            font-size: 18px; 
+            line-height: 1.6; /* hace que el texto no se vea pegado */
+         }
+
+       /*ANIMACION AL CARGAR LA PAGINA*/
+         @keyframes aparecer {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        .contenido, .texto-portada, .frase {
+         animation: aparecer 1s ease forwards;
+        }
+
+      
+        .frase {
+            background-color: #EAC4D5;
+            padding: 22px;
+            margin: 30px 0;
+            border-radius: 15px;
+            text-align: center;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+         .frase {
+             transition: transform 0.3s, box-shadow 0.3s;
+           }
+
+          .frase:hover {
+              transform: scale(1.05);
+              box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+          } 
+
+
+        .img-contenido {
+            width: 100%;
+            max-width: 520px;
+            display: block;
+            margin: 25px auto;
+            border-radius: 18px;
+        }
+
+        footer {
+            background-color: #5E548E;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+     
+      
+/* footer*/
+footer {
+    background-color: #5E548E;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+    box-sizing: border-box;  /* evita que el padding agrande el footer */
+}
+
+        /* FOOTER */
+        footer {
+            background-color: #5E548E;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+ /*BOTON SIGUIENTE*/
+        .boton-siguiente-container {
+    text-align: center;
+    margin: 40px 0;  /* espacio suficiente arriba y abajo del botón */
+}
+
+.boton-siguiente {
+    background: linear-gradient(135deg, #5E548E, #7B6FC9);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.boton-siguiente:hover {
+    background: linear-gradient(135deg, #7B6FC9, #5E548E);
+    transform: scale(1.05);
+}
+
+    /*MENU DESPLEGABLE*/
+      nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #5E548E;
+    padding: 15px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #7B6FC9;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #5E548E;
+    border-radius: 8px;
+    flex-direction: column;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.submenu:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu .sub-menu a {
+    padding: 10px 15px;
+}
+
+.submenu .sub-menu a:hover {
+    background-color: #7B6FC9;
+}
+
+/*CUADRO DE TIPS*/
+ .cuadro-tips {
+    background: linear-gradient(135deg, #FDE2E4, #B8E0D2);
+    border-left: 8px solid #5E548E;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.cuadro-tips h3 {
+    margin-top: 0;
+    color: #5E548E;
+    font-size: 24px;
+    text-align: center;
+}
+
+.cuadro-tips ul {
+    padding-left: 20px;
+}
+
+.cuadro-tips li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+     
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Inicio</a>
+
+        <!-- Menú desplegable para Motivación -->
+        <div class="submenu">
+            <a href="#">Motivación ▼</a>
+            <div class="sub-menu">
+                <a href="#subtema1">¿Qué es la motivación?</a>
+                <a href="#subtema2">Aprender de los errores</a>
+                <a href="#subtema3">Celebrar los pequeños logros</a>
+            </div>
+        </div>
+
+        <a href="orientacion.html">Orientación emocional</a>
+        <a href="estres.html">Estrés</a>
+        <a href="bullying.html">Bullying</a>
+        <a href="apoyo.html">Apoyo</a>        
+        <a href="agradecimiento.html">Agradecimiento</a>
+    </nav>
+</header>
+
+<div class="portada">
+    <img src="../imagenes/motivacion.jpg" alt="Motivación juvenil">
+    <div class="texto-portada">
+        <h1>Motivación</h1>
+    </div>
+</div>
+
+<div class="contenido">
+
+     <h2 id="subtema1">¿Qué es la motivación?</h2>
+
+    <p>
+        La motivación no significa estar feliz todo el tiempo ni tener fuerzas todos los días. A veces, motivarse es simplemente levantarse 
+        aunque no tengas ganas, seguir aunque estés cansado y no rendirte incluso cuando dudas de ti mismo. No se trata de perfección, sino de 
+        constancia y de atreverse a seguir adelante, paso a paso.
+    </p>
+
+    <p>
+        En el colegio y en la vida, muchas veces sentimos presión por cumplir expectativas, por encajar o por no fallar. Esto puede hacernos 
+         sentir insuficientes o pensar que no somos capaces. Sin embargo, cada persona tiene su propio ritmo, su propia historia y su propio proceso. 
+        Reconocer esto es un primer paso para motivarse de manera real y saludable.
+    </p>
+
+    <p>
+           La motivación también se encuentra en pequeñas cosas del día a día: levantarte a tiempo, preparar tus materiales, ayudar a un compañero o intentar 
+           algo nuevo. Cada acción, por simple que parezca, te acerca un poco más a tus metas y fortalece tu confianza.
+
+    <div class="frase">
+        “Vas más lejos de lo que crees, incluso cuando avanzas despacio.”
+    </div>
+
+
+    <h2 id="subtema2">Aprender de los errores </h2>
+
+    <p>
+       La motivación crece cuando aprendes a ver los errores como oportunidades, no como fracasos. Cada tropiezo es una lección que te enseña qué hacer mejor
+      la próxima vez. Equivocarse no significa que no seas capaz, sino que estás en un proceso de aprendizaje y crecimiento.
+    </p>
+
+    <p>
+       Aprender de los errores también implica perdonarte a ti mismo y no castigarte por lo que no salió como esperabas. Nadie tiene la vida resuelta, y 
+        todos enfrentamos desafíos. Lo importante es levantarse, intentarlo otra vez y no dejar que el miedo a equivocarte te detenga.
+
+    <img src="../imagenes/motivacion.jpg" class="img-contenido" alt="Mensaje motivacional">
+
+    <p>
+     Además, reflexionar sobre lo que salió mal te ayuda a mejorar tus decisiones y a fortalecer tu autoestima. Cada intento que haces, aunque no tenga éxito, 
+     te enseña algo valioso. La motivación no siempre es energía y alegría: muchas veces es coraje, paciencia y perseverancia.
+    </p>
+    
+    <div class="frase">
+        Cuando te sientas desanimado, recuerda un momento en que superaste algo difícil. Esa experiencia demuestra que puedes hacerlo de nuevo.
+    </div>
+
+    <h2 id="subtema3"> Celebrar los pequeños logros </h2>
+
+    <p>
+   No solo los grandes éxitos cuentan. Cada tarea completada, cada pregunta respondida en clase o cada avance en un proyecto es un logro. Reconocer y celebrar 
+    estos pequeños pasos fortalece tu motivación y te recuerda que cada esfuerzo cuenta, aunque parezca insignificante.    </p>
+
+<p>
+A veces nos enfocamos tanto en los objetivos grandes que olvidamos apreciar los pasos intermedios. Celebrar los pequeños logros no significa conformarse, 
+sino valorar tu progreso y darte crédito por tu constancia y dedicación. </p>
+
+<p>
+Reconocer tus avances también ayuda a mantener una actitud positiva frente a los desafíos. Cuando te das tiempo para notar lo que lograste, incluso en días 
+difíciles, tu mente asocia el esfuerzo con resultados y refuerza tu impulso para seguir adelante. </p>
+
+<p>
+        Además, celebrar los logros pequeños crea un hábito de gratitud y autoconfianza. Al recordar tus éxitos, aunque sean simples, aprendes a confiar 
+más en tus capacidades y a motivarte para enfrentar nuevas metas con entusiasmo y seguridad.
+    </p>
+
+<div class="cuadro-tips">
+    <h3>💡 Tips </h3>
+    <ul>
+        <li>Puedes llevar un diario de logros, escribir cada cosa que hiciste bien o compartir tus avances con alguien cercano. Esto ayuda a mantener la motivación incluso en días difíciles.</li>
+    </ul>
+</div>    
+
+
+<div class="boton-siguiente-container">
+    <a href="orientacion.html" class="boton-siguiente">Siguiente →</a>
+</div>
+
+<footer>
+    <p>Proyecto de Grado – Área de Psicología</p>
+    <p>
+        Nury Madeley Ortiz Izquierdo ·
+        Ashley Valentina Yepez Chuez ·
+        Victor Emanuel Plua Laborde
+    </p>
+</footer>
+
+</body>
+</html>

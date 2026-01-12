@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bullying - Proyecto Psicología</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: linear-gradient(135deg, #B8E0D2, #FDE2E4);
+        }
+
+        header {
+            background-color: #5E548E;
+            padding: 18px 0;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 14px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .portada {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .portada img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(65%);
+        }
+
+        .texto-portada {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+
+        .texto-portada h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .contenido {
+            background-color: white;
+            width: 78%;
+            margin: -20px auto 20px auto;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: justify;
+            
+        }
+
+        .contenido h2 {
+            text-align: center;
+            color: #5E548E;
+            font-size: 32px;
+        }
+
+
+        .contenido p {
+            font-size: 18px; 
+            line-height: 1.6; /* hace que el texto no se vea pegado */
+         }
+
+       /*ANIMACION AL CARGAR LA PAGINA*/
+         @keyframes aparecer {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        .contenido, .texto-portada, .frase {
+         animation: aparecer 1s ease forwards;
+        }
+
+      
+        .frase {
+            background-color: #EAC4D5;
+            padding: 22px;
+            margin: 30px 0;
+            border-radius: 15px;
+            text-align: center;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+         .frase {
+             transition: transform 0.3s, box-shadow 0.3s;
+           }
+
+          .frase:hover {
+              transform: scale(1.05);
+              box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+          } 
+
+
+        .img-contenido {
+            width: 100%;
+            max-width: 520px;
+            display: block;
+            margin: 25px auto;
+            border-radius: 18px;
+        }
+
+        footer {
+            background-color: #5E548E;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+     
+      
+/* footer*/
+footer {
+    background-color: #5E548E;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+    box-sizing: border-box;  /* evita que el padding agrande el footer */
+}
+
+        /* FOOTER */
+        footer {
+            background-color: #5E548E;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+ /*BOTON SIGUIENTE*/
+        .boton-siguiente-container {
+    text-align: center;
+    margin: 40px 0;  /* espacio suficiente arriba y abajo del botón */
+}
+
+.boton-siguiente {
+    background: linear-gradient(135deg, #5E548E, #7B6FC9);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.boton-siguiente:hover {
+    background: linear-gradient(135deg, #7B6FC9, #5E548E);
+    transform: scale(1.05);
+}
+
+    /*MENU DESPLEGABLE*/
+      nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #5E548E;
+    padding: 15px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #7B6FC9;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #5E548E;
+    border-radius: 8px;
+    flex-direction: column;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.submenu:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu .sub-menu a {
+    padding: 10px 15px;
+}
+
+.submenu .sub-menu a:hover {
+    background-color: #7B6FC9;
+}
+
+/*CUADRO DE TIPS*/
+ .cuadro-tips {
+    background: linear-gradient(135deg, #FDE2E4, #B8E0D2);
+    border-left: 8px solid #5E548E;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.cuadro-tips h3 {
+    margin-top: 0;
+    color: #5E548E;
+    font-size: 24px;
+    text-align: center;
+}
+
+.cuadro-tips ul {
+    padding-left: 20px;
+}
+
+.cuadro-tips li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+     
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="motivacion.html">Motivación</a>
+        <a href="orientacion.html">Orientación emocional</a>
+        <a href="estres.html">Estrés</a>   
+       
+            <div class="submenu">
+            <a href="#">Bullying ▼</a>
+            <div class="sub-menu">
+                <a href="#subtema1">¿Qué es el estrés escolar?</a>
+                <a href="#subtema2">Tipos de bullying en el entorno escolar </a>
+                <a href="#subtema3">Cómo afecta el bullying a los estudiantes</a>
+                <a href="#subtema4">Qué hacer si sufres bullying</a>
+            </div>
+        </div>
+        <a href="apoyo.html">Apoyo</a>
+        <a href="agradecimiento.html">Agradecimiento</a>
+    </nav>
+</header>
+
+<div class="portada">
+    <img src="../imagenes/bullying.jpg" alt="Bullying juvenil">
+    <div class="texto-portada">
+        <h1>Bullying</h1>
+    </div>
+</div>
+
+<div class="contenido">
+
+<h2 id="subtema1">¿Qué es el bullying? </h2> 
+
+<p> El bullying es una forma de violencia que ocurre cuando una persona o un grupo agrede repetidamente a otro estudiante, ya sea de manera física, verbal, psicológica o a través de redes sociales. No se trata de una broma ni de un conflicto aislado: el bullying causa daño emocional, afecta la autoestima y puede tener consecuencias graves en el bienestar y el rendimiento escolar de quien lo sufre. </p>
+
+<p> En el colegio, el bullying puede presentarse de muchas formas: insultos, burlas constantes, apodos ofensivos, exclusión, amenazas, golpes o difusión de rumores. Reconocer que estas conductas no son normales ni aceptables es el primer paso para construir un entorno escolar seguro y respetuoso para todos. </p>
+
+<div class="cuadro-tips">
+    <h3>💡 Tips </h3>
+    <ul>
+        <li>Si una conducta te hace sentir miedo, tristeza o humillación, no es una broma.</li>
+    </ul>
+</div>
+
+  <img src="../imagenes/acoso.jpg" class="img-contenido" alt="Conflictos escolar">
+ 
+<p> ㅤㅤ
+ㅤㅤ</p>
+
+<h2 id="subtema2">Tipos de bullying en el entorno escolar </h2> 
+
+<p> El bullying no siempre es visible. Además del acoso físico, existe el bullying verbal, que incluye insultos, burlas y comentarios hirientes; el bullying psicológico, que busca intimidar, excluir o hacer sentir inferior a otra persona; y el ciberbullying, que ocurre a través de mensajes, redes sociales o publicaciones en internet. </p>
+
+<p> Todos estos tipos de bullying pueden causar daño emocional profundo. Muchas veces, el acoso ocurre en silencio y la persona afectada no habla por miedo, vergüenza o por pensar que nadie la va a creer. Por eso es importante prestar atención a las señales y tomar cualquier forma de acoso con seriedad. </p>
+
+      <div class="frase"> “El daño emocional también cuenta.” </div>
+
+<p> ㅤㅤ
+ㅤㅤ</p>
+
+     <h2 id="subtema3"> Cómo afecta el bullying a los estudiantes </h2>
+
+<p> El bullying puede afectar la autoestima, la confianza y la seguridad de los estudiantes. Quienes lo sufren pueden sentirse solos, tristes, ansiosos o con miedo de asistir al colegio. También puede afectar su concentración, sus calificaciones y su participación en clase. </p>
+
+<p> Con el tiempo, el bullying puede hacer que un estudiante crea que no vale lo suficiente o que merece ser tratado mal, lo cual no es cierto. Nadie merece ser lastimado ni humillado. El impacto del bullying va más allá del momento y puede dejar huellas emocionales si no se actúa a tiempo. </p>
+
+<div class="cuadro-tips">
+    <h3>💡 Tips </h3>
+    <ul>
+        <li>Si notas cambios en tu ánimo o comportamiento, habla con alguien de confianza.</li>
+    </ul>
+</div>
+
+<p> ㅤㅤ
+ㅤㅤ</p>
+
+    <h2 id="subtema4"> Qué hacer si sufres bullying </h2>
+
+<p> Si estás viviendo una situación de bullying, es importante que sepas que no es tu culpa y que no tienes que enfrentarla solo. Hablar con un docente, un orientador o un adulto de confianza puede ayudarte a encontrar apoyo y soluciones. Guardar silencio solo prolonga el daño. </p>
+
+<p> Buscar ayuda es un acto de valentía. El colegio cuenta con personas y espacios para protegerte y acompañarte. Contar lo que sucede permite que se tomen medidas y que la situación no continúe. </p>
+
+ <img src="../imagenes/triste.jpg" class="img-contenido" alt="Conflictos escolar">
+
+
+<div class="boton-siguiente-container">
+    <a href="apoyo.html" class="boton-siguiente">Siguiente →</a>
+</div>
+
+       
+    
+ <footer>
+    <p>Proyecto de Grado – Área de Psicología</p>
+    <p>
+        Nury Madeley Ortiz Izquierdo ·
+        Ashley Valentina Yepez Chuez ·
+        Victor Emanuel Plua Laborde
+    </p>
+</footer>
+
+         
+</body>
+</html>
+
+
+
+
+
+
+

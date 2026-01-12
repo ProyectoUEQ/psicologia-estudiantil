@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Orintación emocional - Proyecto Psicología</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: linear-gradient(135deg, #B8E0D2, #FDE2E4);
+        }
+
+        header {
+            background-color: #5E548E;
+            padding: 18px 0;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 14px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .portada {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .portada img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(65%);
+        }
+
+        .texto-portada {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+
+        .texto-portada h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .contenido {
+            background-color: white;
+            width: 78%;
+            margin: -20px auto 20px auto;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: justify;
+            
+        }
+
+        .contenido h2 {
+            text-align: center;
+            color: #5E548E;
+            font-size: 32px;
+        }
+
+
+        .contenido p {
+            font-size: 18px; 
+            line-height: 1.6; /* hace que el texto no se vea pegado */
+         }
+
+       /*ANIMACION AL CARGAR LA PAGINA*/
+         @keyframes aparecer {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        .contenido, .texto-portada, .frase {
+         animation: aparecer 1s ease forwards;
+        }
+
+      
+        .frase {
+            background-color: #EAC4D5;
+            padding: 22px;
+            margin: 30px 0;
+            border-radius: 15px;
+            text-align: center;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+         .frase {
+             transition: transform 0.3s, box-shadow 0.3s;
+           }
+
+          .frase:hover {
+              transform: scale(1.05);
+              box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+          } 
+
+
+        .img-contenido {
+            width: 100%;
+            max-width: 520px;
+            display: block;
+            margin: 25px auto;
+            border-radius: 18px;
+        }
+
+        footer {
+            background-color: #5E548E;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+     
+      
+/* footer*/
+footer {
+    background-color: #5E548E;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+    box-sizing: border-box;  /* evita que el padding agrande el footer */
+}
+
+        /* FOOTER */
+        footer {
+            background-color: #5E548E;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+ /*BOTON SIGUIENTE*/
+        .boton-siguiente-container {
+    text-align: center;
+    margin: 40px 0;  /* espacio suficiente arriba y abajo del botón */
+}
+
+.boton-siguiente {
+    background: linear-gradient(135deg, #5E548E, #7B6FC9);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.boton-siguiente:hover {
+    background: linear-gradient(135deg, #7B6FC9, #5E548E);
+    transform: scale(1.05);
+}
+
+    /*MENU DESPLEGABLE*/
+      nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #5E548E;
+    padding: 15px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #7B6FC9;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #5E548E;
+    border-radius: 8px;
+    flex-direction: column;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.submenu:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu .sub-menu a {
+    padding: 10px 15px;
+}
+
+.submenu .sub-menu a:hover {
+    background-color: #7B6FC9;
+}
+
+/*CUADRO DE TIPS*/
+ .cuadro-tips {
+    background: linear-gradient(135deg, #FDE2E4, #B8E0D2);
+    border-left: 8px solid #5E548E;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.cuadro-tips h3 {
+    margin-top: 0;
+    color: #5E548E;
+    font-size: 24px;
+    text-align: center;
+}
+
+.cuadro-tips ul {
+    padding-left: 20px;
+}
+
+.cuadro-tips li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+     
+html {
+    scroll-behavior: smooth;
+}
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Inicio</a>
+       <a href="motivacion.html">Motivación</a>
+       
+        <div class="submenu">
+            <a href="#">Orientación emocional ▼</a>
+            <div class="sub-menu">
+                <a href="#subtema1">¿Qué es la orientación emocional?</a>
+                <a href="#subtema2">Reconocer tus emociones</a>
+                <a href="#subtema3">Expresar lo que sientes de forma saludable</a>
+                <a href="#subtema4">Empatía y autocuidado dentro del colegio</a>
+            </div>
+        </div>
+
+        <a href="estres.html">Estrés</a>
+        <a href="bullying.html">Bullying</a>
+        <a href="apoyo.html">Apoyo</a>        
+        <a href="agradecimiento.html">Agradecimiento</a>
+    </nav>
+</header>
+
+<div class="portada">
+    <img src="../imagenes/orientacion.jpg" alt="Orientación emocional juvenil">
+    <div class="texto-portada">
+        <h1>Orientación emocional</h1>
+    </div>
+</div>
+
+<div class="contenido">
+
+     <h2 id="subtema1">¿Qué es la orientación emocional?</h2>
+
+  <p> La orientación emocional es el proceso de conocer, comprender y manejar tus emociones de manera saludable. No se trata de evitar sentir tristeza, miedo o frustración, sino de aprender a reconocer estas emociones, entender por qué surgen y saber cómo actuar para cuidarte a ti mismo y a los demás. </p>
+
+<p> En la vida y en la escuela, todos enfrentamos situaciones que nos provocan emociones intensas: un examen difícil, una discusión con un amigo o sentir presión por cumplir expectativas. La orientación emocional nos ayuda a tomar decisiones conscientes, mantener la calma y fortalecer nuestra confianza frente a los desafíos. </p>
+
+<div class="cuadro-tips">
+    <h3>💡 Tips </h3>
+    <ul>
+        <li>Cada vez que sientas una emoción fuerte, respira profundo y pregúntate: “¿Por qué me siento así? ¿Qué puedo hacer para sentirme mejor?”</li>
+    </ul>
+</div>
+
+    <h2 id="subtema2">Reconocer tus emociones</h2>
+
+<p> El primer paso para cuidarte emocionalmente es identificar lo que sientes. A veces confundimos estrés con enojo o tristeza con frustración, y eso puede hacer que reaccionemos de forma exagerada o que guardemos sentimientos que necesitamos expresar. </p>
+
+<p> Reconocer tus emociones no significa juzgarte. Todos sentimos miedo, tristeza, alegría, enojo o ansiedad, y eso es parte de ser humano. Aprender a ponerles nombre a tus emociones te permite entender tu comportamiento, comunicarte mejor y buscar soluciones efectivas. </p>
+
+<img src="../imagenes/emociones.jpg" class="img-contenido" alt="Emociones en estudiantes">
+
+<p> Aceptar tus emociones sin juzgarte es fundamental. No existen emociones “buenas” o “malas”, todas cumplen una función. Lo importante es aprender a escucharlas y actuar de manera consciente. </p>
+
+ <div class="frase">
+        “Ponerle nombre a lo que sientes es el inicio de sanarlo.”
+    </div>
+
+     <h2 id="subtemas3"> Expresar lo que sientes de forma saludable </h2>
+ 
+<p> Expresar lo que sientes es una parte esencial del bienestar emocional. Muchas veces, por miedo a ser juzgados o a incomodar a otros, guardamos nuestras emociones. Sin embargo, cuando no expresamos lo que sentimos, esas emociones pueden acumularse y transformarse en estrés, ansiedad o tristeza. Aprender a expresar tus emociones de forma saludable te permite liberarte y sentirte más en calma contigo mismo. </p>
+
+<p> Expresar emociones no significa reaccionar impulsivamente, sino comunicar con respeto y honestidad. Hablar con alguien de confianza, escribir lo que sientes o realizar una actividad creativa puede ayudarte a comprender mejor tus emociones y a encontrar soluciones. Cuando te permites expresarte, fortaleces tu autoestima y tus relaciones con los demás. </p>
+
+<div class="cuadro-tips">
+    <h3>💡 Tips </h3>
+    <ul>
+        <li>     
+        Si hablar es difícil, empieza escribiendo tus emociones y luego compártelas cuando te sientas preparado.
+</li>
+    </ul>
+</div>
+
+     <h2 id="subtema4"> Empatía y autocuidado dentro del colegio </h2>
+ 
+<p> En el colegio convivimos con muchas personas diferentes, cada una con su propia realidad. Practicar la empatía significa entender que tus compañeros también pueden estar pasando por momentos difíciles, aunque no lo demuestren. Ser respetuoso, escuchar y evitar juzgar crea un ambiente escolar más seguro y positivo. </p>
+
+<p> El autocuidado emocional en el colegio implica reconocer cuándo necesitas descansar, cuándo estás sobrecargado de tareas o cuándo algo te está afectando emocionalmente. Cuidarte no significa dejar de cumplir con tus responsabilidades, sino aprender a equilibrarlas para sentirte mejor y rendir más. </p>
+
+<img src="../imagenes/empatia.jpg" class="img-contenido" alt="Empatia">
+
+<div class="boton-siguiente-container">
+    <a href="estres.html" class="boton-siguiente">Siguiente →</a>
+</div>
+
+       
+    
+ <footer>
+    <p>Proyecto de Grado – Área de Psicología</p>
+    <p>
+        Nury Madeley Ortiz Izquierdo ·
+        Ashley Valentina Yepez Chuez ·
+        Victor Emanuel Plua Laborde
+    </p>
+</footer>
+
+         
+</body>
+</html>
+ 
+
+
+
+
+
+
