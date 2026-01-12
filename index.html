@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenida - Proyecto Psicología</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: linear-gradient(135deg, #B8E0D2, #FDE2E4);
+        }
+
+        /* MENÚ SUPERIOR */
+        header {
+            background-color: #5E548E;
+            padding: 18px 0;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 14px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+   
+        
+        /* PORTADA GRANDE (PARTE DE ARRIBA BONITA) */
+        .portada {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            overflow: hidden;
+        }
+
+        .portada img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(65%);
+        }
+
+        .texto-portada {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .texto-portada h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .texto-portada p {
+            font-size: 20px;
+        }
+
+        /* CONTENIDO */
+        .contenido {
+            background-color: white;
+            width: 78%;
+            margin: -40px auto 40px auto;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: justify;
+            
+        }
+
+        .contenido h2 {
+            text-align: center;
+            color: #5E548E;
+            font-size: 32px;
+
+        }
+
+         .contenido p {
+            font-size: 18px; 
+            line-height: 1.6; /* hace que el texto no se vea pegado */
+         }
+         
+         /*ANIMACION AL CARGAR LA PAGINA*/
+         @keyframes aparecer {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        .contenido, .texto-portada, .frase {
+         animation: aparecer 1s ease forwards;
+        }
+
+        /* FRASE DESTACADA */
+        .frase {
+            background-color: #EAC4D5;
+            padding: 22px;
+            margin: 30px 0;
+            border-radius: 15px;
+            text-align: center;
+            font-style: italic;
+            font-size: 18px;
+           }
+
+         .frase {
+             transition: transform 0.3s, box-shadow 0.3s;
+           }
+
+          .frase:hover {
+              transform: scale(1.05);
+              box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+          } 
+
+        /* IMAGEN INTERNA */
+        .img-contenido {
+            width: 100%;
+            max-width: 520px;
+            display: block;
+            margin: 25px auto;
+            border-radius: 18px;
+        }
+
+       /*BOTON SIGUIENTE*/
+        .boton-siguiente-container {
+    text-align: center;
+    margin: 40px 0;  /* espacio suficiente arriba y abajo del botón */
+}
+
+.boton-siguiente {
+    background: linear-gradient(135deg, #5E548E, #7B6FC9);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.boton-siguiente:hover {
+    background: linear-gradient(135deg, #7B6FC9, #5E548E);
+    transform: scale(1.05);
+}
+
+/* Aseguramos que el footer mantenga su tamaño y no se estire */
+footer {
+    background-color: #5E548E;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+    box-sizing: border-box;  /* evita que el padding agrande el footer */
+}
+
+        /* FOOTER */
+        footer {
+            background-color: #5E548E;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+      
+        
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="motivacion.html">Motivación</a>
+        <a href="orientacion.html">Orientación emocional</a>
+        <a href="estres.html">Estrés</a>
+        <a href="bullying.html">Bullying</a>
+        <a href="apoyo.html">Apoyo</a>
+        <a href="agradecimiento.html">Agradecimiento</a>
+    </nav>
+</header>
+
+<!-- PARTE DE ARRIBA BONITA -->
+<div class="portada">
+    <img src="../imagenes/portada.jpg" alt="Bienestar emocional juvenil">
+    <div class="texto-portada">
+        <h1>Bienvenida a tu espacio seguro</h1>
+        <p>Aquí tus emociones importan y tu voz cuenta</p>
+    </div>
+</div>
+
+<!-- CONTENIDO -->
+<div class="contenido">
+
+    <h2>Un espacio creado para ti</h2>
+
+    <p>
+        Este sitio web fue creado como un proyecto de grado con un objetivo muy claro:
+        cuidar, informar y acompañar a los estudiantes en su bienestar emocional.
+        Sabemos que el colegio no solo es un lugar para aprender materias,
+        sino también un espacio donde se viven emociones intensas, retos personales
+        y experiencias que marcan nuestra vida.
+    </p>
+
+    <p>
+        La adolescencia es una etapa de cambios, de dudas, de presiones sociales
+        y de decisiones importantes. A veces nos sentimos bien, motivados y seguros,
+        y otras veces tristes, cansados o confundidos. Por eso, este proyecto busca
+        ser un apoyo, un lugar donde puedas sentirte comprendida y acompañada.
+    </p>
+
+    <div class="frase">
+        “No tienes que estar bien todo el tiempo. Pedir ayuda también es valentía.”
+    </div>
+
+    <img src="../imagenes/inicio.jpg" class="img-contenido" alt="Apoyo emocional">
+
+    <p>
+        Aquí encontrarás información clara y responsable sobre temas como el bullying
+        y el consumo de drogas, así como espacios de motivación, orientación emocional
+        y manejo del estrés. También incluimos mensajes pensados para esos días en los
+        que te sientes desanimado, frustrado o simplemente necesitas leer algo bonito.
+    </p>
+
+    <p>
+        Esperamos que este sitio no solo cumpla con un requisito académico,
+        sino que realmente aporte algo positivo a nuestra comunidad educativa.
+    </p>
+
+<div class="boton-siguiente-container">
+    <a href="motivacion.html" class="boton-siguiente">Siguiente →</a>
+</div>
+
+       
+    
+ <footer>
+    <p>Proyecto de Grado – Área de Psicología</p>
+    <p>
+        Nury Madeley Ortiz Izquierdo ·
+        Ashley Valentina Yepez Chuez ·
+        Victor Emanuel Plua Laborde
+    </p>
+</footer>
+
+         
+</body>
+</html>
